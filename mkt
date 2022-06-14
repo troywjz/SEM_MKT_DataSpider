@@ -5,7 +5,8 @@ import requests, json, re, time, datetime
 
 date = str(datetime.datetime.now().date())  # 获取当天的日期
 # date = '2022-06-14'     # 指定日期
-print(date)
+# print(date)   # 查看爬取数据的日期
+
 
 # 百度账户推广数据
 cookie1 = {} # 百度账户的cookie
@@ -16,130 +17,36 @@ try:
 except:
     print('error')
 
+
 # 360账户推广数据
-cookie11 = {
-    "__guid": "206785792.3881154552502074400.1625724686300.936",
-    "bad_id39c040b0-910b-11ea-88b3-07623558e79f": "54f5b442-e38b-11eb-b1be-81626bee1ab2",
-    "Qs_lvt_368385": "1626147534",
-    "Qs_pv_368385": "2835615807831780000",
-    "__huid": "11TcFh2cG6lqvxrf/09DSPvmqzBVykQtEMQqsmdghKpBU=",
-    "__DC_gid": "206785792.932603881.1625724686302.1634551307425.10",
-    "__gid": "205519128.824025856.1626147217338.1634551333425.8",
-    "__NS_Q": "u%3D%25O1%25O1%25OR%25N9%25Q0%25P7%25PQ%25NSN01%26n%3D%26le%3DrGSfAmp5WGDjZGLmYzAioD%3D%3D%26m%3D%26qid%3D3353597244%26im%3D1_t011655040b3ed000bf%26src%3Dpcw_adsystem_dianjing%26t%3D1",
-    "Qs_lvt_337334": "1641176172%2C1644211006%2C1645495627%2C1646618366%2C1649210713",
-    "Qs_pv_337334": "4150303209171079700%2C651066129228096900%2C1640513872349066000%2C1945449143551967500%2C1018806878969852200",
-    "Q": "u%3D%25O1%25O1%25OR%25N9%25Q0%25P7%25PQ%25NSN01%26n%3D%26le%3DrGSfAmp5WGDjZGLmYzAioD%3D%3D%26m%3D%26qid%3D3353597244%26im%3D1_t011655040b3ed000bf%26src%3Dpcw_adsystem_dianjing%26t%3D1",
-    "T": "s%3D0def0e4f1385eadc1cdad7972a9d2390%26t%3D1649210726%26lm%3D%26lf%3D4%26sk%3Df8eb724c4089806a0d77020dadfaad22%26mt%3D1649210726%26rc%3D%26v%3D2.0%26a%3D1",
-    "__NS_T": "s%3D0def0e4f1385eadc1cdad7972a9d2390%26t%3D1649210726%26lm%3D%26lf%3D4%26sk%3Df8eb724c4089806a0d77020dadfaad22%26mt%3D1649210726%26rc%3D%26v%3D2.0%26a%3D1",
-    "Qs_lvt_92974": "1626147421%2C1649904934",
-    "Qs_pv_92974": "3470487301168870400%2C2521321620359147000%2C3444757103445772300%2C2925168560266243600",
-    "Qs_lvt_137611": "1649745000%2C1649820757%2C1649902125%2C1650254552%2C1650362703",
-    "Qs_pv_137611": "4032716316150453000%2C170824818663503740%2C297908309572926460%2C2876808523468442600%2C4266770352678553000",
+cookie2 = {}    # 360账户的cookie
+print('360账户推广数据：')
+try:
+    SLLmkt.main(date=date, cookie=cookie2, location1='A2', location2='B2', location3='C2')
+except:
+    print('error')
 
-}
 
-print('北京星童A01')
-SLLmkt.main(date=date, cookie=cookie12, location1='A2', location2='B2', location3='C2')
-print('北京对啊网1')
-SLLmkt.main(date=date, cookie=cookie11, location1='A8', location2='B8', location3='C8')
-print('北京对啊网3')
-SLLmkt.main(date=date, cookie=cookie13, location1='A11', location2='B11', location3='C11')
+# 搜狗账户推广数据
+cookie3 = {}    # 搜狗账户的cookie
+print('搜狗账户推广数据：')
+try:
+    SGmkt.main(date=date, cookie=cookie3, location1='A3', location2='B3', location3='C3')
+except:
+    print('error')
 
-# 搜狗 - zwuzhou@foxmail.com
-cookie21 = {
-    'uid': '18664482',
-    'IPISP': '-',
-    'IPLOC': 'CN6101',
-    'SUID': '6AEA90DB492CA20A0000000060F686B7',
-    'SUV': '1626769081274490',
-    'CXID': '52DD6C5D528FBA964D32D347D747AB23',
-    'SMYUV': '1628414682573250',
-    'SNUID': 'E2621853888D527A608A4A7889420189',
-    'ld': 'ekllllllll2AlWk1Y0pB5pwDySBAGB6DLiR$zkllll9lllllpllll5@@@@@@@@@@',
-    'suf_p4p_user_id': '18664482',
-    'JSESSIONID': 'aaa3AhQS9e5YC4S6F1Say',
-    'uid': '18664482',
-    'IPISP': '-',
-    'JANUS-SESSION': 'd1010ddd-2418-4219-9346-d2c180ff7d78',
-    'session_id_atlas': 'sid_atlas_c62893d4-5d7a-4e3c-ba75-3feb73cdaddd',
 
-}
-# 搜狗 - sijijun1@sohu.com
-cookie22 = {
-    'CXID': "9251A0ADE1541341BFE3F394855BBB2D",
-    'FREQUENCY': "1640145014973_3",
-    'front_screen_dpi': "1.25",
-    'front_screen_resolution': "1920*1080",
-    'IPISP': "-",
-    'IPLOC': "CN6101",
-    'JANUS-SESSION': "59a1e1fd-df7a-4c60-ab5c-af29514b0084",
-    'JSESSIONID': "aaaXcK4lC_uTmgJ4E1Say",
-    'LCLKINT': "6239",
-    'LSTMV': "667,260",
-    'session_id_atlas': "sid_atlas_7ceaf225-e316-4501-a144-c237d843c2bb",
-    'SNUID': "55D4AEE43E3AF2A1D2BEDE963F279412",
-    'suf_p4p_user_id': "22782312",
-    'SUID': "6AEA90DB7050A00A000000006142C34A",
-    'SUV': "1631765325946628",
-    'uid': "22782312"
-
-}
-# 搜狗 - duia4@sohu.com
-cookie23 = {
-    'uid': '21552274',
-    'IPISP': '-',
-    'SMYUV': '1625722283172770',
-    'SUV': '1625722283172850',
-    'IPLOC': 'CN6101',
-    'JSESSIONID': 'aaab4OfIUOE7k6kxJ1Say',
-    'suf_p4p_user_id': '21552274',
-    'uid': '21552274',
-    'IPISP': '-',
-    'JANUS-SESSION': '6e4c1fdf-5c51-4dbe-99c7-581f10cd83dd',
-    'session_id_atlas': 'sid_atlas_311146e3-f3f3-4daa-b2e3-a6e1b80f50c8',
-
-}
-
-print('搜狗 - zwuzhou@foxmail.com')
-SGmkt.main(date=date, cookie=cookie21, location1='A4', location2='B4', location3='C4')
-print('搜狗 - sijijun1@sohu.com')
-SGmkt.main(date=date, cookie=cookie22, location1='A7', location2='B7', location3='C7')
-print('搜狗 - duia4@sohu.com')
-SGmkt.main(date=date, cookie=cookie23, location1='A12', location2='B12', location3='C12')
-
-# 神马 - 四级君教育02
-cookie31 = {
-    "hc.userId": "210319261",
-    "SSO_IDT_V2": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTEyOEtXIn0.TUkTiKvdoiMGsdwtWvgAJPUb4Oa3mrHa_1MbO1Csn54nfQQYi38XnQ.KxL77iqr24S_cYpIIStMNw.6e3o8JSYxSgNqnIYaK9-ueCsata3HL5_3BvdUaGI30SG2e0O5Mh1Gmq_3MmmuYvJkR08BIZf4RAIUXJwNSZqMNCnfVO_XFwys1muV4imDL6qrsivi2FzdKiyKFVB54TNnmehs0ctTvXfz1Zg_NdkhMZhJ8qu4dRnOclx9zocyYfMlIYrDWPlC5UOANIzr0-RALtO6L2hhzeyAqE5CpZRWRBh3eEUSLWS2fPG8Rgj87cZCW38aKjbPG2iPsml0BzjHevt1xXSo98HTrmWQRMMKHmEJgT8k_VAInYjSmjTLEpD6kWGmQORCF5xDEdPGuFg_lpVbe0K8WdjZUHAgTclolAMsa72CeOtc3Rtqqt6xu7mX4qbNDDaS9aP5T4ZIGFNx7Wi0Pc16x1wxZw4Tk8TeA._TbxpSlRw0Gxks9kdpf1Ag",
-    "_pk_ref.2a4a2f081132.a6b8": "%5B%22%22%2C%22%22%2C1650334090%2C%22https%3A%2F%2Fe.sm.cn%2F%22%5D",
-    "_pk_id.2a4a2f081132.a6b8": "ebd36b38-0573-4a07-ab27-f8bf956410ac.1637657379.209.1650334090.1650246943.",
-    "UC-CSRF-TOKEN": "726D5030514C492B775851306C496B686770714968513D3D",
-    'CsrfToken': '726D5030514C492B775851306C496B686770714968513D3D',
-}
-headers31 = {
+# 神马账户推广数据
+cookie4 = {}    # 神马账户的cookie
+headers4 = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
-    'uc-csrf-token': '726D5030514C492B775851306C496B686770714968513D3D',
-    'set-cookie': 'UC-CSRF-TOKEN=6C433747664B70534F57534C6B705A323675712F41673D3D; Domain=e.uc.cn; Path=/',
+    'uc-csrf-token': '',    # 复制浏览器中的相应字段
+    'set-cookie': '',   # 复制浏览器中的相应字段
     'content-type': 'application/json;charset=UTF-8',
 }
-# 神马 - 会计初级
-cookie32 = {
-    '_pk_id.2a4a2f081132.a6b8': "dc3fe6b4-c30e-4251-a9be-65a0b839c055.1647500331.44.1650609647.1650597436.",
-    '_pk_ref.2a4a2f081132.a6b8': "[\"\",\"\",1650609647,\"https://e.sm.cn/\"]",
-    'hc.userId': "24590129",
-    'SSO_IDT_V2': "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiQTEyOEtXIn0.DnZ388TyJQJr9IL_YD6QqjYvuFKoEKCQboNQras2P4WZhCF4jPY40w.g3kQpj_N55XxR70ki8dW3g.iklS-3ZvW51gplpdvLD8HuH9niDp-NmHPlWeqS-tR1oxaEoMyk-kVVqKp9M8CzPGSU-ghm3dc_ykZu2rKzPpUnKpIZkrUeQP-P0ruUZBy1XLFMKRPTbQsx2OWOb8OXVMfn86gKyC9x9teqxQ5n5TSZZuJVD0TVOWSodu7Bx42R5zIbg0PX-bCtFZyM6e6ira3r5rtPqB5wXWiRlCLFZI5nsYJDh00WZG5Vb3AcsWhg2N2OIHKmjUc3-LjrTZgQw-bKl5TKPcNcY_yvBUjz3VqOnj0RKr5lDETj51fUl_Vt2G9RJIYES9trjewKYp91NH38RvDI29pxu7qmDp6WYKPdixdLkQrgh-wu8skm7q_ad6Om9uv5cF0DuITkdAoFwT.v2YL0vLDk4TFnBk6B1JXhQ",
-    'UC-CSRF-TOKEN': "66784B30796A65394A52796D683641763558304854513D3D"
-
-}
-headers32 = {
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
-    'UC-CSRF-TOKEN': '66784B30796A65394A52796D683641763558304854513D3D',
-    # 'set-cookie': 'UC-CSRF-TOKEN=6575684B327376456C6A457A7057476D524543474B513D3D; Domain=e.uc.cn; Path=/',
-    'content-type': 'application/json;charset=UTF-8',
-
-}
-
-print('神马 - 四级君教育02')
-SMmkt.main(date=date, cookie=cookie31, headers=headers31, smid='210319261', location1='A3', location2='B3', location3='C3')
-print('神马 - 会计初级')
-SMmkt.main(date=date, cookie=cookie32, headers=headers32, smid='24590129', location1='A5', location2='B5', location3='C5')
+smid = ''   # 制浏览器中的相应字段
+print('神马账户推广数据：')
+try:
+    SMmkt.main(date=date, cookie=cookie4, headers=headers4, smid=smid, location1='A4', location2='B4', location3='C4')
+except:
+    print('error')
