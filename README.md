@@ -1,6 +1,8 @@
 # SEM_MKT_DataSpider
 SEM渠道市场推广数据爬虫-百度/360/搜狗/神马
 
+* 内容经过脱敏处理。
+
 
 Python环境为Python3.8
 
@@ -19,3 +21,4 @@ Python环境为Python3.8
   - SGmkt.py：搜狗广告投放平台  http://xuri.p4p.sogou.com/
   - SMmkt.py：UC神马超级汇川    https://e.uc.cn/
 
+公众号文章地址：https://mp.weixin.qq.com/s/GH0PxWOeLPUWulzghXKBEA
