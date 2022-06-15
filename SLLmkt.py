@@ -6,8 +6,8 @@ def main(date, cookie, location1, location2, location3):
 
         import requests, json, datetime
 
-        # today = str(datetime.datetime.now().date())
-        # print(today)
+        # date = str(datetime.datetime.now().date())
+        # print(date)
 
         url = 'https://dianjing.e.360.cn/djapi/report/getreport'
 
