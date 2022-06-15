@@ -29,7 +29,7 @@ def main(date, cookie, location1, location2, location3):
             'topn_limit': '5000',
         }
 
-        # 时间'yyyy-mm-dd'替换文当天时间today
+        # 时间'yyyy-mm-dd'替换文当天时间date
         data['end_date'] = data['end_date'].replace("yyyy-mm-dd", date)
         data['start_date'] = data['start_date'].replace("yyyy-mm-dd", date)
 
